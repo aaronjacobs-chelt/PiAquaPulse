@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiAquaPulse Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { width: 80%; margin: auto; }
+        canvas { max-width: 100%; }
+        #map { height: 300px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>PiAquaPulse Dashboard</h1>
+    <div class="container">
+        <h2>Latest Readings</h2>
+        <table border="1" style="width:100%; margin-bottom: 20px;">
+            <tr>
+                <th>Timestamp</th><th>Temperature (°C)</th><th>pH</th><th>Turbidity (NTU)</th>
+            </tr>
+            <tr id="data-row">
+                <td colspan="4">Loading...</td>
+            </tr>
+        </table>
+        
+        <h2>Water Quality Trends</h2>
+        <canvas id="dataChart"></canvas>
+        
+        <h2>Latest GPS Location</h2>
+        <div id="map"></div>
+    </div>
+
+    <script>
+        let chart;
+        function fetchData() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        document.getElementById('data-row').innerHTML = '<td colspan="4">No data available</td>';
+                        return;
+                    }
+                    document.getElementById('data-row').innerHTML = `
+                        <td>${new Date(parseFloat(data.timestamp) * 1000).toLocaleString()}</td>
+                        <td>${data.temperature}</td>
+                        <td>${data.pH}</td>
+                        <td>${data.turbidity}</td>`;
+                    
+                    updateChart(data);
+                    updateMap(data.gps);
+                });
+        }
+
+        function updateChart(data) {
+            if (!chart) {
+                let ctx = document.getElementById('dataChart').getContext('2d');
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [],
+                        datasets: [
+                            { label: 'Temperature (°C)', borderColor: 'red', data: [] },
+                            { label: 'pH', borderColor: 'blue', data: [] }
+                        ]
+                    },
+                    options: { responsive: true }
+                });
+            }
+            let timestamp = new Date(parseFloat(data.timestamp) * 1000).toLocaleTimeString();
+            chart.data.labels.push(timestamp);
+            chart.data.datasets[0].data.push(data.temperature);
+            chart.data.datasets[1].data.push(data.pH);
+            chart.update();
+        }
+
+        function updateMap(gps) {
+            let [lat, lon] = gps.split(',').map(Number);
+            let map = L.map('map').setView([lat, lon], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            L.marker([lat, lon]).addTo(map)
+                .bindPopup('Latest GPS Location').openPopup();
+        }
+
+        fetchData();
+        setInterval(fetchData, 5000);
+    </script>
+</body>
+</html>
