@@ -111,7 +111,7 @@ sudo pip3 install --upgrade pip
 ### 5. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/PiAquaPulse.git
+git clone https://github.com/aaronjacobs-chelt/PiAquaPulse.git
 cd PiAquaPulse
 ```
 
