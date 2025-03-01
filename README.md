@@ -61,9 +61,55 @@ The system efficiently logs water temperature, pH, turbidity, and GPS location, 
 For detailed setup instructions and parts list, see [SETUP.md](SETUP.md).
 
 ## 📊 Wiring Diagram
-[Schematic/Wiring Diagram Placeholder]
+<img src="Images/PiAquaPulseDiagram.webp" alt="[Schematic/Wiring Diagram Placeholder]">
 
 A comprehensive wiring diagram showing all connections between the Raspberry Pi and sensors will be available soon. For now, please refer to the pin configuration in the `CONFIG` section of PAPScript.py and the detailed instructions in [SETUP.md](SETUP.md).
+
+Raspberry Pi Zero W
+├── DS18B20 Temperature Sensor
+│   ├── Data → GPIO4
+│   ├── Power → 3.3V
+│   └── GND → GND
+│
+├── Gravity Analog pH Sensor (via MCP3008 ADC)
+│   ├── Signal → MCP3008 CH0
+│   ├── VCC → 3.3V
+│   ├── GND → GND
+│
+├── SEN0189 Turbidity Sensor (via MCP3008 ADC)
+│   ├── Signal → MCP3008 CH1
+│   ├── VCC → 5V
+│   ├── GND → GND
+│
+├── NEO-6M GPS Module (UART)
+│   ├── TX → GPIO15 (RX)
+│   ├── RX → GPIO14 (TX)
+│   ├── VCC → 3.3V
+│   ├── GND → GND
+│
+├── Push Button (Manual Logging)
+│   ├── One Leg → GPIO17
+│   └── Other Leg → GND (Pull-up resistor used)
+│
+├── LED Indicator (Status Feedback)
+│   ├── Anode (+) → GPIO27
+│   └── Cathode (-) → GND
+│
+├── MCP3008 (SPI Analog-to-Digital Converter)
+│   ├── CH0 → pH Sensor Signal
+│   ├── CH1 → Turbidity Sensor Signal
+│   ├── VDD → 3.3V
+│   ├── VREF → 3.3V
+│   ├── AGND → GND
+│   ├── CLK → GPIO11 (SPI SCLK)
+│   ├── DOUT → GPIO9 (SPI MISO)
+│   ├── DIN → GPIO10 (SPI MOSI)
+│   └── CS → GPIO8 (SPI CE0)
+│
+└── Power Supply
+    ├── USB Power Bank → Raspberry Pi Zero (Micro-USB Power Port)
+    └── Optional: Voltage Step-down if using external battery pack
+
 
 ## 💻 Software Setup
 
