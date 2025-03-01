@@ -61,10 +61,11 @@ The system efficiently logs water temperature, pH, turbidity, and GPS location, 
 For detailed setup instructions and parts list, see [SETUP.md](SETUP.md).
 
 ## 📊 Wiring Diagram
-<img src="Images/PiAquaPulseDiagram.webp" alt="[Schematic/Wiring Diagram Placeholder]">
+<img src="Images/PiAquaPulseDiagram.webp" alt="[Schematic/Wiring Diagram Placeholder]" width="400">
 
 A comprehensive wiring diagram showing all connections between the Raspberry Pi and sensors will be available soon. For now, please refer to the pin configuration in the `CONFIG` section of PAPScript.py and the detailed instructions in [SETUP.md](SETUP.md).
 
+```plaintext
 Raspberry Pi Zero W
  ├── DS18B20 Temperature Sensor
  │   ├── Data → GPIO4
@@ -109,7 +110,7 @@ Raspberry Pi Zero W
  └── Power Supply
      ├── USB Power Bank → Raspberry Pi Zero (Micro-USB Power Port)
      └── Optional: Voltage Step-down if using external battery pack
-
+```
 
 ## 💻 Software Setup
 
