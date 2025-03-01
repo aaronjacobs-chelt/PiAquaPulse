@@ -1,0 +1,8 @@
+# PiAquaPulse dependencies
+RPi.GPIO==0.7.1
+adafruit-circuitpython-mcp3xxx>=1.4.0
+w1thermsensor>=2.0.0
+pynmea2>=1.18.0
+pyserial>=3.5
+numpy>=1.22.0
+
