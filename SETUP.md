@@ -1,6 +1,7 @@
 # PiAquaPulse Setup Guide
 
 This guide provides step-by-step instructions for setting up the PiAquaPulse water quality monitoring system on a Raspberry Pi Zero.
+This project is on [Cirkit Designer](https://app.cirkitdesigner.com/project/9ebd3616-910c-42d6-a1ab-20e3393ac790)
 
 ## Hardware Requirements
 
