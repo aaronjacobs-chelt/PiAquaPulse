@@ -61,7 +61,7 @@ The system efficiently logs water temperature, pH, turbidity, and GPS location, 
 For detailed setup instructions and parts list, see [SETUP.md](SETUP.md).
 
 ## 📊 Wiring Diagram
-<img src="Images/PiAquaPulseDiagram.webp" alt="[Schematic/Wiring Diagram Placeholder]" width="400">
+<img src="Images/circuit_image.png" alt="[Schematic/Wiring Diagram from CirKit Designer]" width="400">
 
 A comprehensive wiring diagram showing all connections between the Raspberry Pi and sensors will be available soon. For now, please refer to the pin configuration in the `CONFIG` section of PAPScript.py and the detailed instructions in [SETUP.md](SETUP.md).
 
