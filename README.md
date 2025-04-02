@@ -2,14 +2,14 @@
 <h1>🌊 PiAquaPulse 🌊</h1>
 <p><strong>A Smart River Health Monitoring System</strong></p>
 <p>
-    <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version 1.0.0">
+    <img src="https://img.shields.io/badge/version-1.0.1-blue.svg" alt="Version 1.0.1">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT">
     <img src="https://img.shields.io/badge/Raspberry%20Pi-Zero-red.svg" alt="Raspberry Pi Zero">
     <img src="https://img.shields.io/badge/Python-3.7+-yellow.svg" alt="Python 3.7+">
 </p>
 
 <!-- Add a project logo or banner image here -->
-<p>[Project Logo/Banner Placeholder]</p>
+<p><img src="Images/PiAquaPulse-LogoBanner2.png" alt="Product Logo"></p>
 </div>
 
 ## 📋 Table of Contents
