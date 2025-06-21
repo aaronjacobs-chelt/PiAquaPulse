@@ -165,8 +165,52 @@ Contributions to the PiAquaPulse project are welcome! Here's how you can contrib
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-Please make sure to update tests and documentation as appropriate.
+Please make sure to update tests and documentation as appropriate. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+## 📞 Support & Contact
+
+### Getting Help
+- **Documentation**: Check [SETUP.md](SETUP.md) for detailed setup instructions
+- **Issues**: Report bugs and request features via [GitHub Issues](https://github.com/aaronjacobs-chelt/PiAquaPulse/issues)
+- **Discussions**: Join the community discussion on [GitHub Discussions](https://github.com/aaronjacobs-chelt/PiAquaPulse/discussions)
+- **Support Guide**: See [.github/SUPPORT.md](.github/SUPPORT.md) for comprehensive help
+
+### Contact Information
+- **Author**: Aaron Jacobs
+- **Email**: git@aaronemail.xyz
+- **GitHub**: [@aaronjacobs-chelt](https://github.com/aaronjacobs-chelt)
+- **Project Repository**: https://github.com/aaronjacobs-chelt/PiAquaPulse
+
+### Commercial Support
+For commercial applications, custom development, or priority support:
+- Email: git@aaronemail.xyz
+- Subject: "PiAquaPulse Commercial Support"
+
+### Security Issues
+For security vulnerabilities, please see our [Security Policy](.github/SECURITY.md) and email git@aaronemail.xyz directly.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Copyright (c) 2025 Aaron Jacobs**
+
+## 🙏 Acknowledgments
+
+- Thanks to the open-source community for the excellent libraries and tools
+- Circuit design created with [CirKit Designer](https://app.cirkitdesigner.com/project/9ebd3616-910c-42d6-a1ab-20e3393ac790)
+- Inspired by the need for accessible environmental monitoring tools
+- Special thanks to field researchers and citizen scientists who test and improve this system
+
+---
+
+<div align="center">
+  <p>
+    <em>Made with 💙 for environmental researchers and water quality enthusiasts</em>
+  </p>
+  <p>
+    <a href="https://github.com/aaronjacobs-chelt/PiAquaPulse/issues">Report Bug</a> •
+    <a href="https://github.com/aaronjacobs-chelt/PiAquaPulse/issues">Request Feature</a> •
+    <a href=".github/SUPPORT.md">Get Support</a>
+  </p>
+</div>

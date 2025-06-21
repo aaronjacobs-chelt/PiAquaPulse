@@ -9,6 +9,17 @@ A Raspberry Pi Zero based system for monitoring water quality parameters:
 - GPS location using NEO-6M module
 
 Designed for field research and environmental monitoring applications.
+
+Author: Aaron Jacobs
+Email: git@aaronemail.xyz
+Project: https://github.com/aaronjacobs-chelt/PiAquaPulse
+License: MIT License
+Version: 1.0.1
+
+For support and documentation:
+- GitHub Issues: https://github.com/aaronjacobs-chelt/PiAquaPulse/issues
+- Setup Guide: https://github.com/aaronjacobs-chelt/PiAquaPulse/blob/main/SETUP.md
+- Support: https://github.com/aaronjacobs-chelt/PiAquaPulse/blob/main/.github/SUPPORT.md
 """
 
 import os
